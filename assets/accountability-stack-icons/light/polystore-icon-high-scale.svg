@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title" class="polystore-icon polystore-icon-high-scale" style="color:#00d5ff">
+  <title id="title">High Scale</title>
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <circle class="icon-ring" cx="64" cy="64" r="56" stroke-width="3" />
+  <g class="icon-glyph" stroke-width="5.5">
+      <path d="M34 95H98" />
+      <path d="M43 95V79H54V95" />
+      <path d="M61 95V68H72V95" />
+      <path d="M79 95V57H90V95" />
+      <path d="M41 62C55 59 68 52 84 36" />
+      <path d="M84 36V51" />
+      <path d="M84 36H69" />
+    </g>
+  </g>
+</svg>

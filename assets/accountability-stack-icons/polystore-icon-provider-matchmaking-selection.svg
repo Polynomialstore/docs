@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title" class="polystore-glyph polystore-glyph-provider-matchmaking-selection" style="color:#ff5bd6">
+  <title id="title">Provider Matchmaking Selection</title>
+  <defs>
+    <mask id="provider-front-occlusion-glyph" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
+      <rect x="0" y="0" width="128" height="128" fill="white" />
+      <circle cx="64" cy="40" r="12" fill="black" />
+      <path d="M42 96V87C42 73 52 64 64 64C76 64 86 73 86 87V96Z" fill="black" />
+    </mask>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <g class="icon-glyph" stroke-width="5.5">
+      <g class="provider-rear" mask="url(#provider-front-occlusion-glyph)">
+        <circle cx="43" cy="53" r="8" />
+        <circle cx="85" cy="53" r="8" />
+        <path d="M28 92V87C28 78 34 72 43 72C48 72 53 74 56 78" />
+        <path d="M100 92V87C100 78 94 72 85 72C80 72 75 74 72 78" />
+      </g>
+      <circle cx="64" cy="40" r="8" />
+      <path d="M46 92V87C46 76 54 68 64 68C74 68 82 76 82 87V92" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title" class="polystore-icon polystore-icon-retrievals" style="color:#00d5ff">
+  <title id="title">Retrievals</title>
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <circle class="icon-ring" cx="64" cy="64" r="56" stroke-width="3" />
+  <g class="icon-glyph" stroke-width="5.5">
+      <path d="M42 31H76L92 47V97H42Z" />
+      <path d="M76 31V47H92" />
+      <path d="M53 69L62 78L80 58" />
+    </g>
+  </g>
+</svg>

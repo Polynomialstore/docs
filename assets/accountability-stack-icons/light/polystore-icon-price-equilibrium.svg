@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 128 128"
+   role="img"
+   aria-labelledby="title"
+   class="polystore-icon polystore-icon-price-equilibrium"
+   style="color:#00d5ff"
+   version="1.1"
+   id="svg33"
+   sodipodi:docname="polystore-icon-price-equilibrium-matched.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs37" />
+  <sodipodi:namedview
+     id="namedview35"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="6.8203125"
+     inkscape:cx="64"
+     inkscape:cy="64"
+     inkscape:window-width="2490"
+     inkscape:window-height="1376"
+     inkscape:window-x="70"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg33" />
+  <title
+     id="title">Price Equilibrium</title>
+  <g
+     fill="none"
+     stroke="currentColor"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="g31">
+    <circle
+       class="icon-ring" cx="64" cy="64" r="56" stroke-width="3"
+       id="circle3" />
+    <g
+       class="icon-glyph" stroke-width="5.5"
+       id="g29">
+      <path
+         d="M64 40V44.5"
+         id="path5" />
+      <circle
+         cx="64"
+         cy="48.8"
+         r="4.15"
+         id="circle7" />
+      <path
+         d="M64 53.1V90"
+         id="path9" />
+      <path
+         d="M44 48.8H59.7"
+         id="path11" />
+      <path
+         d="M68.3 48.8H84"
+         id="path13" />
+      <path
+         d="M 44,48.8 34.8,67.9"
+         id="path15"
+         sodipodi:nodetypes="cc" />
+      <path
+         d="M44 48.8L53 67.5"
+         id="path17" />
+      <path
+         d="M34.8 67.9Q44 74.7 53.2 67.9"
+         id="path19" />
+      <path
+         d="M84 48.8L75 67.5"
+         id="path21" />
+      <path
+         d="m 84,48.8 9.2,19.1"
+         id="path23"
+         sodipodi:nodetypes="cc" />
+      <path
+         d="M74.8 67.9Q84 74.7 93.2 67.9"
+         id="path25" />
+      <path
+         d="M52 92H76"
+         id="path27" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 128 128"
+   role="img"
+   aria-labelledby="title"
+   class="polystore-icon polystore-icon-repairs"
+   style="color:#00d5ff"
+   version="1.1"
+   id="svg19"
+   sodipodi:docname="polystore-icon-repairs-left-centered.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs23" />
+  <sodipodi:namedview
+     id="namedview21"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="4.8226892"
+     inkscape:cx="201.44363"
+     inkscape:cy="89.576579"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
+     inkscape:window-x="2560"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g15" />
+  <title
+     id="title">Repairs</title>
+  <g
+     fill="none"
+     stroke="currentColor"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="g17">
+    <circle
+       class="icon-ring" cx="64" cy="64" r="56" stroke-width="3"
+       id="circle3" />
+    <g
+       class="icon-glyph"
+       stroke-width="5.5"
+       id="g15">
+      <g
+         class="wrench wrench-left"
+         id="g9">
+        <path
+           d="M88 89L53 54"
+           id="path5" />
+        <path
+           d="M53 54C58 43 49 34 38 38L47 47L38 56L29 47C25 58 34 67 45 62L80 97"
+           id="path7" />
+      </g>
+      <path
+         d="M40 89L75 54"
+         id="path11" />
+      <path
+         d="M75 54C70 43 79 34 90 38L81 47L90 56L99 47C103 58 94 67 83 62L48 97"
+         id="path13" />
+    </g>
+  </g>
+</svg>

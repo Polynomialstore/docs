@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title" class="polystore-icon polystore-icon-payment-settlements" style="color:#ff5bd6">
+  <title id="title">Payment Settlements</title>
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <circle class="icon-ring" cx="64" cy="64" r="56" stroke-width="3" />
+  <g class="icon-glyph" stroke-width="5.5">
+      <path d="M35 47H88C92.4 47 96 50.6 96 55V87C96 91.4 92.4 95 88 95H35C30.6 95 27 91.4 27 87V55C27 50.6 30.6 47 35 47Z" />
+      <path d="M35 47L80 36C85 35 89 38 90 43L91 47" />
+      <path d="M96 62H78C72.5 62 68 66.5 68 72C68 77.5 72.5 82 78 82H96" />
+      <circle cx="80" cy="72" r="3" />
+    </g>
+  </g>
+</svg>
