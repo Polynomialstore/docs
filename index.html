@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PolyStore: decentralized storage and delivery.">
+    <meta name="theme-color" content="#09090c">
+    <link rel="icon" href="assets/polystore-mark.svg" type="image/svg+xml">
+    <title>PolyStore | Overview</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: hsl(240 15% 4%);
+        --surface: hsl(240 10% 6% / 0.96);
+        --line: hsl(240 6% 15%);
+        --primary: hsl(300 100% 75%);
+        --secondary: hsl(190 100% 50%);
+        --text: hsl(180 20% 90%);
+        --soft: hsl(180 10% 82%);
+        --muted: hsl(240 5% 68%);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-width: 320px;
+        background: #000;
+      }
+
+      body {
+        min-height: 100svh;
+        margin: 0;
+        color: var(--text);
+        background: #000;
+      }
+
+      main {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+      }
+
+      .frame {
+        position: relative;
+        isolation: isolate;
+        container-type: inline-size;
+        width: min(100vw, 177.7778svh);
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background:
+          url("assets/website-grid-dark.png") 0 0 / 1.5625cqw 1.5625cqw repeat,
+          var(--bg);
+      }
+
+      .frame::before,
+      .frame::after,
+      .visual::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .frame::before {
+        inset: 5% 3.75% 5.8333%;
+        z-index: 0;
+        border: 0.078125cqw solid var(--line);
+        background: var(--surface);
+      }
+
+      .frame::after {
+        inset: 5% 3.75% 5.8333%;
+        z-index: 3;
+        background:
+          linear-gradient(var(--primary), var(--primary)) 0 0 / 2.365% 0.1171875cqw no-repeat,
+          linear-gradient(var(--primary), var(--primary)) 0 0 / 0.1171875cqw 4.362% no-repeat,
+          linear-gradient(var(--primary), var(--primary)) 100% 100% / 2.365% 0.1171875cqw no-repeat,
+          linear-gradient(var(--primary), var(--primary)) 100% 100% / 0.1171875cqw 4.362% no-repeat;
+      }
+
+      .visual {
+        position: absolute;
+        left: 6.875%;
+        top: 21.9444%;
+        z-index: 2;
+        width: 27.8125%;
+        aspect-ratio: 1;
+        box-sizing: content-box;
+        overflow: hidden;
+        border: 0.078125cqw solid var(--line);
+        background: var(--surface);
+        box-shadow:
+          0 1.40625cqw 4.0625cqw rgba(0, 0, 0, 0.24),
+          0 0 1.875cqw color-mix(in srgb, var(--primary) 16%, transparent);
+        animation: enter 700ms cubic-bezier(.2, .8, .2, 1) both;
+      }
+
+      .visual::after {
+        inset: 0;
+        background:
+          linear-gradient(var(--primary), var(--primary)) 0 0 / 2.8125cqw 0.078125cqw no-repeat,
+          linear-gradient(var(--primary), var(--primary)) 0 0 / 0.078125cqw 2.8125cqw no-repeat,
+          linear-gradient(var(--primary), var(--primary)) 100% 100% / 2.8125cqw 0.078125cqw no-repeat,
+          linear-gradient(var(--primary), var(--primary)) 100% 100% / 0.078125cqw 2.8125cqw no-repeat;
+      }
+
+      .visual img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(1.04) contrast(1.02) brightness(1);
+        transition: transform 700ms cubic-bezier(.2, .8, .2, 1), filter 700ms ease;
+      }
+
+      .visual:hover img {
+        transform: scale(1.025);
+        filter: saturate(1.1) contrast(1.04);
+      }
+
+      .content {
+        position: absolute;
+        left: 38.125%;
+        top: 18.8889%;
+        z-index: 2;
+        width: 59.375%;
+        animation: enter 700ms 100ms cubic-bezier(.2, .8, .2, 1) both;
+      }
+
+      .wordmark {
+        margin: 0;
+        color: var(--primary);
+        font-size: 4.53125cqw;
+        font-weight: 880;
+        line-height: 1;
+      }
+
+      h1 {
+        max-width: 60.9375cqw;
+        margin: 2.03125cqw 0 0;
+        font-size: 4.84375cqw;
+        font-weight: 870;
+        line-height: 1.02;
+        letter-spacing: 0;
+        padding-bottom: 0.3em;
+      }
+
+      .subhead {
+        max-width: 50cqw;
+        margin: 1.71875cqw 0 0;
+        color: var(--soft);
+        font-size: 1.796875cqw;
+        font-weight: 620;
+        line-height: 1.22;
+      }
+
+      .subhead strong {
+        color: var(--primary);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9375cqw;
+        margin-top: 1.875cqw;
+      }
+
+      .actions a {
+        min-height: 4.0625cqw;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.1875cqw;
+        padding: 0 1.40625cqw;
+        border: 0.078125cqw solid color-mix(in srgb, var(--primary) 50%, transparent);
+        color: var(--text);
+        background: color-mix(in srgb, var(--primary) 4.5%, transparent);
+        font-size: 1.09375cqw;
+        font-weight: 780;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        transition: color 160ms ease, background 160ms ease, border-color 160ms ease, transform 160ms ease;
+      }
+
+      .actions a:first-child {
+        color: #120b13;
+        border-color: var(--primary);
+        background: var(--primary);
+      }
+
+      .actions a:hover {
+        transform: translateY(-0.15625cqw);
+        border-color: var(--primary);
+        background: color-mix(in srgb, var(--primary) 12%, transparent);
+      }
+
+      .actions a:first-child:hover {
+        color: #09090d;
+        background: #ff91f7;
+      }
+
+      .actions a:focus-visible {
+        outline: 0.15625cqw solid var(--secondary);
+        outline-offset: 0.3125cqw;
+      }
+
+      .arrow {
+        font-size: 1.40625cqw;
+        line-height: 1;
+      }
+
+      .meta {
+        position: absolute;
+        left: 4.21875%;
+        bottom: 2.7778%;
+        z-index: 4;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.625cqw;
+        font-weight: 780;
+        letter-spacing: 0.01em;
+      }
+
+      @keyframes enter {
+        from {
+          opacity: 0;
+          transform: translateY(1.09375cqw);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 820px) {
+        main {
+          place-items: start center;
+          padding: 14px;
+          background:
+            url("assets/website-grid-dark.png") 0 0 / 20px 20px repeat,
+            var(--bg);
+        }
+
+        .frame {
+          aspect-ratio: auto;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 30px;
+          min-height: calc(100svh - 28px);
+          padding: clamp(32px, 8vw, 64px) clamp(24px, 7vw, 52px) 64px;
+          overflow: visible;
+          border: 1px solid var(--line);
+          background: var(--surface);
+        }
+
+        .frame::before {
+          display: none;
+        }
+
+        .frame::after {
+          inset: -1px;
+          background:
+            linear-gradient(var(--primary), var(--primary)) 0 0 / 28px 1.5px no-repeat,
+            linear-gradient(var(--primary), var(--primary)) 0 0 / 1.5px 28px no-repeat,
+            linear-gradient(var(--primary), var(--primary)) 100% 100% / 28px 1.5px no-repeat,
+            linear-gradient(var(--primary), var(--primary)) 100% 100% / 1.5px 28px no-repeat;
+        }
+
+        .visual {
+          position: relative;
+          left: auto;
+          top: auto;
+          width: min(64vw, 270px);
+          border-width: 1px;
+          box-shadow:
+            0 18px 52px rgba(0, 0, 0, 0.24),
+            0 0 24px color-mix(in srgb, var(--primary) 16%, transparent);
+        }
+
+        .visual::after {
+          background:
+            linear-gradient(var(--primary), var(--primary)) 0 0 / 36px 1px no-repeat,
+            linear-gradient(var(--primary), var(--primary)) 0 0 / 1px 36px no-repeat,
+            linear-gradient(var(--primary), var(--primary)) 100% 100% / 36px 1px no-repeat,
+            linear-gradient(var(--primary), var(--primary)) 100% 100% / 1px 36px no-repeat;
+        }
+
+        .content {
+          position: relative;
+          left: auto;
+          top: auto;
+          width: auto;
+        }
+
+        .wordmark {
+          font-size: clamp(38px, 12vw, 58px);
+        }
+
+        h1 {
+          max-width: none;
+          font-size: clamp(44px, 12vw, 70px);
+        }
+
+        .subhead {
+          max-width: none;
+          font-size: clamp(18px, 5vw, 23px);
+        }
+
+        .actions {
+          gap: 12px;
+          margin-top: 24px;
+        }
+
+        .actions a {
+          min-height: 52px;
+          gap: 28px;
+          padding: 0 18px;
+          border-width: 1px;
+          font-size: 14px;
+        }
+
+        .actions a:hover {
+          transform: translateY(-2px);
+        }
+
+        .actions a:focus-visible {
+          outline-width: 2px;
+          outline-offset: 4px;
+        }
+
+        .arrow {
+          font-size: 18px;
+        }
+
+        .meta {
+          font-size: 8px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .frame {
+          padding-right: 18px;
+          padding-left: 18px;
+        }
+
+        h1 {
+          font-size: clamp(36px, 10.5vw, 44px);
+        }
+
+        .actions {
+          display: grid;
+        }
+
+        .actions a {
+          width: 100%;
+        }
+
+        .meta {
+          left: 18px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="frame" aria-labelledby="page-title">
+        <div class="visual" aria-hidden="true">
+          <img src="assets/polystore-logo-dark.png" alt="">
+        </div>
+
+        <div class="content">
+          <p class="wordmark">PolyStore</p>
+          <h1 id="page-title">Decentralized Storage<br>and Delivery</h1>
+          <p class="subhead">Decentralized storage has focused on keeping data.<br><strong>PolyStore</strong> also delivers data.</p>
+
+          <nav class="actions" aria-label="PolyStore deck formats">
+            <a href="./polystore-2026-09.html">
+              <span>View deck</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="./polystore-2026-09.pdf">
+              <span>Download deck</span>
+              <span class="arrow" aria-hidden="true">↓</span>
+            </a>
+          </nav>
+        </div>
+
+        <p class="meta">PolyStore · Overview</p>
+      </section>
+    </main>
+  </body>
+</html>
